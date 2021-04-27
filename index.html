@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Dashboard, starwars, axios">
+    <meta name="description" content="Dashboard feito para treinar js, css e html">
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <title>Dashboard Star Wars</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="lateral-menu">
+            
+            <img src="assets/logo.png" alt="logo">
+            
+            <div class="menu-itens">
+                <ul>
+                    <li>
+                        <img src="assets/dashboard.svg" alt="dashboard">
+                        <p>Dashboard</p>
+                    </li>
+
+                    <li>
+                        <img src="assets/personagens.svg" alt="personagens">
+                        <p>Personagens</p>
+                        
+                    </li>
+
+                    <li>
+                        <img src="assets/planetas.svg" alt="Planetas e Luas">
+                        <p>Planetas e Luas</p>
+                    </li>
+
+                    <li>
+                        <img src="assets/nave.svg" alt="Naves Espaciais">
+                        <p>Naves Espaciais</p>
+                    </li>
+                </ul>
+            </div><!--menu-itens-->
+            <div class="settings">
+                <i data-feather="settings"></i>
+                <p>Configurações</p>
+            </div><!--settings-->    
+
+            
+        </div><!--lateral-menu-->
+        
+        <div class="content">
+            
+            <div class="cards-header">
+                <div class="card card-small">
+                    <div class="card-content">
+                        <div class="card-info">
+                            <p>Personagens</p>
+                            <h2 id="personagens"></h2>
+                        </div><!--card-info-->
+                        <img src="assets/personagens-black.svg" alt="personagens-black">
+                    </div><!--card-content-->
+                </div><!--card-->
+
+
+                <div class="card card-large">
+                    <div class="card-container">
+                        <div class="card-content">
+                            <div class="card-info">
+                                <p>Luas</p>
+                                <h2 id="luas"></h2>
+                            </div><!--card-info-->
+                            <img src="assets/luas-black.svg" alt="luas-black">
+                        </div><!--card-content-->
+                        <div class="card-content">
+                            <div class="card-info">
+                                <p>Planetas</p>
+                                <h2 id="planetas"></h2>
+                            </div><!--card-info-->
+                            <img src="assets/planetas-black.svg" alt="planetas-black">
+                        </div><!--card-content-->
+                    </div><!--card-container-->
+                </div><!--card-->
+
+
+
+
+                <div class="card card-small">
+                    <div class="card-content">
+                        <div class="card-info">
+                            <p>Naves</p>
+                            <h2 id="naves"></h2>
+                        </div><!--card-info-->
+                        <img src="assets/nave-black.svg" alt="Naves-black">
+                    </div><!--card-content-->
+                </div><!--card-->
+            </div><!--cards-header-->
+
+            <div class="table-container">
+
+                <div class="table">
+                    <h5>Últimos filmes</h5>
+                    <p>Saiba os ultimos lançamentos da marca</p>
+                    <table id="filmsTable">
+                        <thead>
+                            <tr>
+                                <th>Titulo</th>
+                                <th>Estréia</th>
+                                <th>Diretor</th>
+                                <th>Episódio</th>
+                            </tr>
+                        </thead>
+
+                        <tbody></tbody>
+                    </table>
+                </div><!--table-->
+
+                <div class="chart">
+                    <div id="piechart" style="width: 300px; height: 373px;"></div>
+                </div>
+
+            </div><!--table-container-->
+
+        </div><!--content-->
+
+    </div><!--container-->
+
+
+    <script>
+        feather.replace()
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
